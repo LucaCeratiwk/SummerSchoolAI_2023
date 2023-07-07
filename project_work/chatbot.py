@@ -4,7 +4,8 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import tensorflow as tf
 
 #add
-from .test_model import model_evaluate
+import config
+from test_model import model_evaluate
 
 # Function to handle the /evaluate command
 def evaluate_command(update, context):
@@ -14,7 +15,7 @@ def evaluate_command(update, context):
 def handle_image(update, context):
     # Get the photo file
     photo = update.message.photo[-1].get_file()
-    photo_path = f"images/{photo.file_id}.jpg"
+    photo_path = f"\{photo.file_id}.jpg"
     photo.download(photo_path)
 
     # Load and evaluate the image using the TensorFlow model
@@ -32,17 +33,18 @@ def handle_image(update, context):
 # Replace this with your own TensorFlow model code
 def evaluate_image(image_path):
     # Load and preprocess the image
-    image = tf.io.read_file(image_path)
+    #image = tf.io.read_file(image_path)
     # Add your TensorFlow model code here to evaluate the image and get the results
     # Replace the placeholder code with your actual model evaluation code
-    evaluation_result, confidence = model_evaluate(image)
+    evaluation_result, confidence = model_evaluate(image_path)
 
     return evaluation_result, confidence
 
 # Set up the Telegram bot
 def main():
+    
     # Telegram bot token
-    token = "YOUR_TELEGRAM_BOT_TOKEN"
+    token = config.telegram_token
 
     # Create the updater and dispatcher
     updater = Updater(token=token, use_context=True)
