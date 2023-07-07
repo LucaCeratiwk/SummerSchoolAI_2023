@@ -1,0 +1,3 @@
+0 Class PLASTIC
+1 Class GLASS
+2 Class PAPER
