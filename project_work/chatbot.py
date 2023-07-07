@@ -3,6 +3,9 @@ import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import tensorflow as tf
 
+#add
+from .test_model import model_evaluate
+
 # Function to handle the /evaluate command
 def evaluate_command(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Please upload a picture for evaluation.")
@@ -32,8 +35,7 @@ def evaluate_image(image_path):
     image = tf.io.read_file(image_path)
     # Add your TensorFlow model code here to evaluate the image and get the results
     # Replace the placeholder code with your actual model evaluation code
-    evaluation_result = "Some evaluation result"
-    confidence = 0.85
+    evaluation_result, confidence = model_evaluate(image)
 
     return evaluation_result, confidence
 
