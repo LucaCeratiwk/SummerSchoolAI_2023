@@ -25,3 +25,28 @@ Press start, search for "vscode", find the program "Visual Studio Code".
 
 Right click and launch it as administrator.
 
+
+### Python components
+
+Necessary to have all components to run the project
+
+Open `powershell` (terminal) and execute the indicated command below
+
+1. Keras
+
+    command: pip install keras
+
+2. Tensorflow
+
+    command: pip install tensorflow
+
+3. Pillow
+
+    command 1:  pip install Pillow
+                
+    command 2:  pip install -upgrade Pillow
+
+4. Telegram API
+
+    command: pip install python-telegram-bot<=13.5
+
