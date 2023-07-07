@@ -4,12 +4,11 @@ import os
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackContext, filters, ContextTypes,Application
 import tensorflow as tf
-# related to SSL verification (development only)
-import requests
 
-# Disable SSL certificate verification
-# **Security Warning**
-requests.packages.urllib3.disable_warnings()
+import sys
+sys.path.append('/local/')
+
+from config import TOKEN
 
 # Function to handle the /evaluate command
 async def evaluate_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -49,11 +48,9 @@ def evaluate_image(image_path):
 
 # Set up the Telegram bot
 def main():
-    # Telegram bot token
-    token = "6276281454:AAGhhy4t-2oIBt1tNENMt7L7SCgCeqIEOfk"
 
     # Create the updater
-    updater = Application.builder().token(token).build()
+    updater = Application.builder().token(TOKEN).build()
 
     # Get the application to register handlers
     #application = updater.application
