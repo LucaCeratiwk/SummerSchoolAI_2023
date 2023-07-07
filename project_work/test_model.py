@@ -2,13 +2,17 @@ from keras.models import load_model  # TensorFlow is required for Keras to work
 from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
 
+# add
+from pathlib import Path
+
+BASE_PATH = Path(__file__).parent.resolve() + "\models"
+
+model_foldername = '\garbage_model'
+
+MODEL_PATH = BASE_PATH + model_foldername + r"\keras_model.h5"
+LABELS_PATH = BASE_PATH + model_foldername + r"\labels.txt"
 
 def model_evaluate(image):
-
-    BASE_PATH = r"E:\Code\SSAIthread_2023\models\garbage-model"
-
-    MODEL_PATH = BASE_PATH + r"\keras_model.h5"
-    LABELS_PATH = BASE_PATH + r"\labels.txt"
 
     # Disable scientific notation for clarity
     np.set_printoptions(suppress=True)
