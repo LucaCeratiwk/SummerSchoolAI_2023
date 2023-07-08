@@ -1,5 +1,5 @@
 # local configuration files
-
+project_work/config.py
 local/*
 
 # Byte-compiled / optimized / DLL files

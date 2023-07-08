@@ -42,7 +42,7 @@ def evaluate_image(image_path):
 
 # Set up the Telegram bot
 def main():
-    
+
     # Telegram bot token
     token = config.telegram_token
 
