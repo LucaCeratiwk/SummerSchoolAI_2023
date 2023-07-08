@@ -1,10 +1,15 @@
+#!/usr/bin/env python
+
 import os
 import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import tensorflow as tf
 
 #add
-import config
+import sys
+sys.path.append('../local/')
+from config import TOKEN
+
 from test_model import model_evaluate
 
 # Function to handle the /evaluate command
@@ -43,11 +48,8 @@ def evaluate_image(image_path):
 # Set up the Telegram bot
 def main():
 
-    # Telegram bot token
-    token = config.telegram_token
-
     # Create the updater and dispatcher
-    updater = Updater(token=token, use_context=True)
+    updater = Updater(TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
     # Add handlers for the /evaluate command and image uploads

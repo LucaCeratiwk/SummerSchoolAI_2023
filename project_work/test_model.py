@@ -3,7 +3,10 @@ from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
 
 # change this based on your local repo path
-REPO_ABSOLUTE_PATH = r"C:\Projects\SSAIthread2023"
+import sys
+sys.path.append('../local/')
+from config import REPO_ABSOLUTE_PATH
+
 
 model_foldername = r'\models\garbage-model'
 
