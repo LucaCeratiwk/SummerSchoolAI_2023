@@ -32,13 +32,13 @@ Collegatevi al repository:
 
 Scaricate il file `.zip` contenente tutta la struttura.
 
-![](./.README_imgs/download1.png)
+![](.README_imgs/download1.png)
 
-![](./.README_imgs/download2.png)
+![](.README_imgs/download2.png)
 
 Scegliete un folder oppure createne uno e "unzippate" la cartella. Vi troverete con una struttura come questa:
 
-![](./.README_imgs/folder_structure.svg)
+![](.README_imgs/folder_structure.svg)
 
 File che trovate nei folder (i file e i folder non riportati qui non ci interessano per ora):
 
@@ -52,7 +52,7 @@ File che trovate nei folder (i file e i folder non riportati qui non ci interess
 
 ⚠ **dovete aggiungere un folder** `local` ⚠
 
-![](./.README_imgs/folder_structure_2.svg)
+![](.README_imgs/folder_structure_2.svg)
 
 Il folder `local` contiene un file che defnisce un valore utilizzato da `chatbot.py` e uno utilizzato da `test_model.py`.
 I valori in questo file devono essere tenuti solo in locale per ragioni di sicurezza e di praticità.
