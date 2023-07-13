@@ -54,14 +54,14 @@ File che trovate nei folder (i file e i folder non riportati qui non ci interess
 
 ![](README_imgs/folder_structure_2.svg)
 
-Il folder `local` contiene un file che defnisce un valore utilizzato da `chatbot.py` e uno utilizzato da `test_model.py`.
+Il folder `local` contiene un file che definisce un valore utilizzato da `chatbot.py` e uno utilizzato da `test_model.py`.
 I valori in questo file devono essere tenuti solo in locale per ragioni di sicurezza e di praticità.
 
 Quindi all'interno di `local` create un file `config.py` e scrivete solo le seguenti due righe, inserendo nella prima il token del bot che avete generato:
 
 ``` python
 TOKEN = "qui-mettete-il-vostro-token"
-REPO_ABSOLUTE_PATH = r".."
+REPO_ABSOLUTE_PATH = r"."
 ```
 
 Il token del bot vi è stato fornito alla generazione del bot stesso da parte di [@BotFather](https://web.telegram.org/k/#@BotFather)

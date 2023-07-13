@@ -4,10 +4,10 @@ import numpy as np
 
 # change this based on your local repo path
 import sys
-sys.path.append('../local/')
+sys.path.append('./local/')
 from config import REPO_ABSOLUTE_PATH
 
-
+# modify to select a new model
 model_foldername = r'\models\garbage-model'
 
 MODEL_PATH = REPO_ABSOLUTE_PATH + model_foldername + r"\keras_model.h5"
