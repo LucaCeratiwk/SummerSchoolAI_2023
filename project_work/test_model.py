@@ -4,7 +4,7 @@ import numpy as np
 
 # change this based on your local repo path
 import sys
-sys.path.append('../local/')
+sys.path.append('./local/')
 from config import REPO_ABSOLUTE_PATH
 
 
