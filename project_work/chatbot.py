@@ -7,7 +7,7 @@ import tensorflow as tf
 
 #add
 import sys
-sys.path.append('../local/')
+sys.path.append('./local/')
 from config import TOKEN
 
 from test_model import model_evaluate
